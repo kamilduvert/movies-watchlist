@@ -3,8 +3,14 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    @include media('<=tablet') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include media('<=phone') {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   
   &__header {
@@ -19,6 +25,12 @@
       margin-right: 20px;
       font-size: 1.8rem;
       font-weight: 900;
+      @include media('<=tablet') {
+        font-size: 1.5rem;
+      }
+      @include media('<=phone') {
+        font-size: 1.2rem;
+      }
     }
 
     &__counter {
@@ -29,6 +41,12 @@
       font-size: 1rem;
       font-weight: 600;
       color: $color-primary;
+      @include media('<=tablet') {
+        font-size: 0.8rem;
+      }
+      @include media('<=phone') {
+        font-size: 0.6rem;
+      }
     }
   }
 
