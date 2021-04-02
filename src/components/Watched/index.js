@@ -8,7 +8,7 @@ const Watched = ({ watched }) => {
     <section className="movies">
       <div className="container">
         <div className="movies__header">
-          <h2 className="movies__header__title">Watched</h2>
+          <h2 className="movies__header__title">Watched Movies</h2>
           {watched.length > 0 && (
             <span className="movies__header__counter">
             {watched.length} {watched.length === 1 ? "Movie" : "Movies"}
@@ -24,7 +24,7 @@ const Watched = ({ watched }) => {
             ))}
           </div>
         ) : (
-          <h2 className="movies__no-movie">No movies in your list! Add some!</h2>
+          <p className="movies__no-movie">No movies in this list! <br />Add some...</p>
         )}
       </div>
     </section>

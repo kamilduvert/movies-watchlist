@@ -7,17 +7,16 @@ const Header = () => {
       <div className="container">
         <div className="header__inner-content">
           <h1 className="header__logo">
-            <i className="fas fa-film"></i>{' '}
-            <Link to="/">Movie Watchlist</Link>
+            <Link to="/">🎥🍿 The Watchlist</Link>
           </h1>
 
           <ul className="header__nav__list">
             <li className="header__nav__item">
-              <Link className="header__nav__link" to="/">Watch List</Link>
+              <Link className="header__nav__link" to="/">To Watch</Link>
             </li>
 
             <li className="header__nav__item">
-              <Link className="header__nav__link" to="/watched">Watched</Link>
+              <Link className="header__nav__link" to="/watched">Already Watched</Link>
             </li>
 
             <li className="header__nav__item">

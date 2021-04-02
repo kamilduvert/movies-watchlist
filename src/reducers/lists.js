@@ -16,7 +16,10 @@ const reducer = (oldState = initialState, action = {}) => {
     case ADD_MOVIE_TO_WATCHLIST:
       return {
         ...oldState,
-        watchlist: [...oldState.watchlist, action.payload]
+        watchlist: [...oldState.watchlist, action.payload],
+        watched: oldState.watchlist.filter(
+          (movie) => movie.id !== action.payload.id
+        ),
       };
     case REMOVE_MOVIE_FROM_WATCHLIST:
       return {

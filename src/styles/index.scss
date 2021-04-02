@@ -50,3 +50,14 @@ body {
   pointer-events: none;
   opacity: 0.5;
 }
+
+::placeholder {
+  color: $color-primary;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+input {
+  font-family: "Quicksand", sans-serif;
+}

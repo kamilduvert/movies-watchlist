@@ -32,7 +32,7 @@ const MovieControls = ({
           className="movie-controls__btn"
           onClick={() => handleRemoveMovieFromWatchlist(movie.id)}
           >
-            <i className="fas fa-eye-slash"></i>
+            <i className="fas fa-times"></i>
           </button>
         </div>
       )}
@@ -43,14 +43,14 @@ const MovieControls = ({
           className="movie-controls__btn"
           onClick={() => handleMoveMovieToWatchlist(movie)}
           >
-            <i className="fas fa-eye"></i>
+            <i className="fas fa-eye-slash"></i>
           </button>
 
           <button 
           className="movie-controls__btn"
           onClick={() => handleRemoveMovieFromWatched(movie.id)}
           >
-            <i className="fas fa-eye-slash"></i>
+            <i className="fas fa-times"></i>
           </button>
         </div>
       )}

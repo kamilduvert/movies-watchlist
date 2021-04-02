@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 
 import { addMovieToWatchlist, addMovieToWatched } from '../../store/actions';
 
-const ResultCard = ({ movie, handleAddMovieToWatchlist, handleAddMovieToWatched }) => {
+const ResultCard = ({ movie, handleAddMovieToWatchlist, handleAddMovieToWatched, watchlist, watched }) => {
 
   return (
     <div className="result-card">
@@ -32,6 +32,7 @@ const ResultCard = ({ movie, handleAddMovieToWatchlist, handleAddMovieToWatched 
         <div className="result-card__controls">
           <button
             className="btn result-card__controls__btn"
+            disabled={watchlist.find((m) => m.id === movie.id)}
             onClick={() => handleAddMovieToWatchlist(movie)
             }
           >
@@ -40,6 +41,7 @@ const ResultCard = ({ movie, handleAddMovieToWatchlist, handleAddMovieToWatched 
 
           <button
             className="btn"
+            disabled={watched.find((m) => m.id === movie.id)}
             onClick={() => handleAddMovieToWatched(movie)
             }
           >
@@ -54,6 +56,7 @@ const ResultCard = ({ movie, handleAddMovieToWatchlist, handleAddMovieToWatched 
 
 ResultCard.propTypes = {
   movie: PropTypes.array.isRequired,
+  watchlist: PropTypes.array.isRequired,
   handleAddMovieToWatchlist: PropTypes.func.isRequired,
   handleAddMovieToWatched: PropTypes.func.isRequired
 };
@@ -61,6 +64,8 @@ ResultCard.propTypes = {
 // == Container
 const mapStateToProps = (state, ownProps) => ({
   movie: ownProps.movie,
+  watchlist: state.lists.watchlist,
+  watched: state.lists.watched
 });
 
 const mapDispatchToProps = (dispatch) => ({

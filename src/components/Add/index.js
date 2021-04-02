@@ -21,7 +21,7 @@ const Add = ({ search, handleChangeSearch, results }) => {
             <input
               className="add__input__field"
               type="text"
-              placeholder="Search for a movie"
+              placeholder="🔍 Search for a movie..."
               value={search}
               onChange={onChange}
             />
