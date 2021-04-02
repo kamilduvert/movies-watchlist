@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-import { getMoviesSuccess, GET_MOVIES } from '../store/actions';
+import { getSearchMoviesSuccess, GET_SEARCH_MOVIES } from '../store/actions';
 
 const tmdbApiKey = process.env.REACT_APP_API_KEY;
 const BASE_URL = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&language=en-US&page=1&include_adult=false&query=`
 
 const searchMw = store => next => action => {
   switch (action.type) {
-    case GET_MOVIES: {
+    case GET_SEARCH_MOVIES: {
       const { search: { search} } = store.getState();
       console.log(BASE_URL+search)
       const config = {
@@ -17,7 +17,7 @@ const searchMw = store => next => action => {
 
       axios(config)
         .then(response => {
-          store.dispatch(getMoviesSuccess(response.data.results));
+          store.dispatch(getSearchMoviesSuccess(response.data.results));
         }).catch(error => {
           console.error(error);
         });

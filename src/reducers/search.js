@@ -1,4 +1,4 @@
-import { CHANGE_SEARCH_FIELD, GET_MOVIES_SUCCESS } from '../store/actions'
+import { CHANGE_SEARCH_FIELD, GET_SEARCH_MOVIES_SUCCESS } from '../store/actions'
 
 const initialState = {
   search: '',
@@ -12,7 +12,7 @@ const reducer = (oldState = initialState, action = {}) => {
         ...oldState,
         search: action.payload
       };
-    case GET_MOVIES_SUCCESS:
+    case GET_SEARCH_MOVIES_SUCCESS:
       return {
         ...oldState,
         results: action.payload

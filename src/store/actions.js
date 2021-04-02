@@ -1,7 +1,7 @@
 /* --- Types --- */
 export const CHANGE_SEARCH_FIELD = "CHANGE_SEARCH_FIELD";
-export const GET_MOVIES = "GET_MOVIES";
-export const GET_MOVIES_SUCCESS = "GET_MOVIES_SUCCESS";
+export const GET_SEARCH_MOVIES = "GET_SEARCH_MOVIES";
+export const GET_SEARCH_MOVIES_SUCCESS = "GET_SEARCH_MOVIES_SUCCESS";
 
 /* --- actions --- */
 
@@ -12,11 +12,11 @@ export const changeSearchField = (value) => ({
 })
 
 export const getMovies = () => ({
-  type: GET_MOVIES,
+  type: GET_SEARCH_MOVIES,
 });
 
-export const getMoviesSuccess = (movies) => ({
-  type: GET_MOVIES_SUCCESS,
+export const getSearchMoviesSuccess = (movies) => ({
+  type: GET_SEARCH_MOVIES_SUCCESS,
   payload: movies
 });
 

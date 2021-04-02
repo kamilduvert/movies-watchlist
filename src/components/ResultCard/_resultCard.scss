@@ -1,0 +1,50 @@
+.result-card {
+  margin-bottom: 20px;
+  display: flex;
+
+  &__poster {
+
+    &__img, &__filler {
+      width: 75px;
+      height: 113px;
+      background-color: $color-grey;
+      border-radius: 5px;
+      margin-right: 10px;
+      display: block;
+    }
+
+    &__filler {
+      padding: 5px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__header {
+      
+    &__title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $color-primary;
+    }
+
+    &__date {
+      font-weight: 300;
+      color: $color-secondary-darker;
+      margin: 5px 0;
+    }
+
+  }
+
+  &__controls {
+
+    &__btn {
+      margin-right: 10px;
+    }
+  }
+
+}

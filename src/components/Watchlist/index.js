@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const Watchlist = ({ watchlist }) => {
   return (
@@ -25,6 +26,10 @@ const Watchlist = ({ watchlist }) => {
       </div>
     </section>
   );
+};
+
+Watchlist.propTypes = {
+  watchlist: PropTypes.array.isRequired
 };
 
 // == Container

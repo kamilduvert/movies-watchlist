@@ -1,7 +1,10 @@
 import React from "react";
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { changeSearchField, getMovies } from '../../store/actions';
+
+import ResultCard from '../ResultCard'
 
 const Add = ({ search, handleChangeSearch, results }) => {
 
@@ -14,7 +17,7 @@ const Add = ({ search, handleChangeSearch, results }) => {
     <section className="add">
       <div className="container">
         <div className="add__content">
-          <div className="add__input-container">
+          <div className="add__input__wrapper">
             <input
               className="add__input__field"
               type="text"
@@ -27,7 +30,7 @@ const Add = ({ search, handleChangeSearch, results }) => {
             <ul className="add__results">
               {results.map((movie) => (
                 <li key={movie.id}>
-                  <h1>{movie.title}</h1>
+                  <ResultCard movie={movie} />
                 </li>
               ))}
             </ul>
@@ -36,6 +39,12 @@ const Add = ({ search, handleChangeSearch, results }) => {
       </div>
     </section>
   );
+};
+
+Add.propTypes = {
+  search: PropTypes.string.isRequired,
+  handleChangeSearch: PropTypes.func.isRequired,
+  results: PropTypes.array.isRequired
 };
 
 // == Container
