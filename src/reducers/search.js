@@ -1,0 +1,26 @@
+import { CHANGE_SEARCH_FIELD, GET_MOVIES_SUCCESS } from '../store/actions'
+
+const initialState = {
+  search: '',
+  results: [],
+};
+
+const reducer = (oldState = initialState, action = {}) => {
+  switch (action.type) {
+    case CHANGE_SEARCH_FIELD:
+      return {
+        ...oldState,
+        search: action.payload
+      };
+    case GET_MOVIES_SUCCESS:
+      return {
+        ...oldState,
+        results: action.payload
+      };
+
+    default:
+      return initialState;
+  }
+}
+
+export default reducer;

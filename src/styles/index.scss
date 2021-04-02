@@ -10,6 +10,7 @@
 /* --- components styles --- */
 @import '../components/Header/header';
 @import '../components/Watchlist/watchlist';
+@import '../components/Add/add';
 
 /* --- general styles --- */
 body {
@@ -19,25 +20,9 @@ body {
 .container {
   padding: 0 15px;
   margin: 0 auto;
+  width: 80%;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
 
 .btn {
   padding: 10px 15px;

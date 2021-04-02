@@ -2,9 +2,11 @@
 import { combineReducers } from 'redux';
 
 // == Local imports
-import watchlistReducer from './watchlist';
+import watchlist from './watchlist';
+import search from './search';
 
 // == Reducer
 export default combineReducers({
-  watchlist: watchlistReducer
+  watchlist,
+  search,
 });

@@ -1,28 +1,25 @@
 /* --- Types --- */
-const ADD_MOVIE_TO_WATCHLIST = "ADD_MOVIE_TO_WATCHLIST";
-const REMOVE_MOVIE_FROM_WATCHLIST = "REMOVE_MOVIE_FROM_WATCHLIST";
-const ADD_MOVIE_TO_WATCHED = "ADD_MOVIE_TO_WATCHED";
-const MOVE_TO_WATCHLIST = "MOVE_TO_WATCHLIST";
-const REMOVE_FROM_WATCHED = "REMOVE_FROM_WATCHED";
+export const CHANGE_SEARCH_FIELD = "CHANGE_SEARCH_FIELD";
+export const GET_MOVIES = "GET_MOVIES";
+export const GET_MOVIES_SUCCESS = "GET_MOVIES_SUCCESS";
 
 /* --- actions --- */
-// actions
-const addMovieToWatchlist = (movie) => {
-  dispatch({ type: ADD_MOVIE_TO_WATCHLIST, payload: movie });
-};
 
-const removeMovieFromWatchlist = (id) => {
-  dispatch({ type: REMOVE_MOVIE_FROM_WATCHLIST, payload: id });
-};
+// Search
+export const changeSearchField = (value) => ({
+  type: CHANGE_SEARCH_FIELD,
+  payload: value
+})
 
-const addMovieToWatched = (movie) => {
-  dispatch({ type: ADD_MOVIE_TO_WATCHED, payload: movie });
-};
+export const getMovies = () => ({
+  type: GET_MOVIES,
+});
 
-const moveToWatchlist = (movie) => {
-  dispatch({ type: MOVE_TO_WATCHLIST, payload: movie });
-};
+export const getMoviesSuccess = (movies) => ({
+  type: GET_MOVIES_SUCCESS,
+  payload: movies
+});
 
-const removeFromWatched = (id) => {
-  dispatch({ type: REMOVE_FROM_WATCHED, payload: id });
-};
+
+
+

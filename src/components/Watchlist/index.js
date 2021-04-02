@@ -29,7 +29,7 @@ const Watchlist = ({ watchlist }) => {
 
 // == Container
 const mapStateToProps = (state) => ({
-  watchlist: state.watchlist,
+  watchlist: state.watchlist.watchlist,
 });
 
 const mapDispatchToProps = (dispatch) => ({

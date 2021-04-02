@@ -8,13 +8,14 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from '../reducers';
 
 // middlewares
+import searchMW from '../middlewares/search'
 
 // == Store
 const store = createStore(
   rootReducer,
-/*   composeWithDevTools(
+  composeWithDevTools(
     applyMiddleware(searchMW)
-  ), */
+  ),
 );
 
 export default store;
