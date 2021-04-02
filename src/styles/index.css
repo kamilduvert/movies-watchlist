@@ -1,0 +1,28 @@
+/* --- Fonts --- */
+@import url('');
+
+/* --- Variables --- */
+@import './vars';
+
+/* -- Breakpoints -- */
+@import './breakpoints';
+
+/* --- components styles --- */
+/* @import '../components/SearchBar/searchBar'; */
+
+/* --- general styles --- */
+body {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
