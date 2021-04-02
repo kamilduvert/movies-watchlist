@@ -21,7 +21,7 @@ const Header = () => {
 
             <li className="header__nav__item">
               <Link className="header__nav__link btn btn-main" to="/add">
-                + Add
+                Search 🔍 
               </Link>
             </li>
           </ul>

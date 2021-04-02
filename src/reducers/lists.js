@@ -17,7 +17,7 @@ const reducer = (oldState = initialState, action = {}) => {
       return {
         ...oldState,
         watchlist: [...oldState.watchlist, action.payload],
-        watched: oldState.watchlist.filter(
+        watched: oldState.watched.filter(
           (movie) => movie.id !== action.payload.id
         ),
       };
