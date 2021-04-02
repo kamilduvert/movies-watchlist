@@ -1,3 +1,4 @@
+//== Actions
 import { CHANGE_SEARCH_FIELD, GET_SEARCH_MOVIES_SUCCESS } from '../store/actions'
 
 const initialState = {

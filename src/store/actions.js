@@ -1,17 +1,20 @@
-/* --- Types --- */
+//== Types
+
+// ====== Search ===========================================
 export const CHANGE_SEARCH_FIELD = "CHANGE_SEARCH_FIELD";
 export const GET_SEARCH_MOVIES = "GET_SEARCH_MOVIES";
 export const GET_SEARCH_MOVIES_SUCCESS = "GET_SEARCH_MOVIES_SUCCESS";
 
+// ====== Lists =============================================
 export const ADD_MOVIE_TO_WATCHLIST = "ADD_MOVIE_TO_WATCHLIST";
 export const ADD_MOVIE_TO_WATCHED = "ADD_MOVIE_TO_WATCHED";
 export const REMOVE_MOVIE_FROM_WATCHLIST = "REMOVE_MOVIE_FROM_WATCHLIST";
 export const MOVE_MOVIE_TO_WATCHLIST = "MOVE_MOVIE_TO_WATCHLIST";
 export const REMOVE_MOVIE_FROM_WATCHED = "REMOVE_MOVIE_FROM_WATCHED";
 
-/* --- actions --- */
+//== Action Creators
 
-// Search
+// ====== Search ===========================================
 export const changeSearchField = (value) => ({
   type: CHANGE_SEARCH_FIELD,
   payload: value
@@ -26,7 +29,7 @@ export const getSearchMoviesSuccess = (movies) => ({
   payload: movies
 });
 
-// Lists
+// ====== Lists =============================================
 export const addMovieToWatchlist = (movie) => ({
   type: ADD_MOVIE_TO_WATCHLIST,
   payload: movie

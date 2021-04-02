@@ -1,3 +1,4 @@
+//== Actions
 import {
   ADD_MOVIE_TO_WATCHLIST,
   REMOVE_MOVIE_FROM_WATCHLIST,

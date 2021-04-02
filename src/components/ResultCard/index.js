@@ -1,8 +1,10 @@
+//== Packages
 import React from "react";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 
+//== Actions
 import { addMovieToWatchlist, addMovieToWatched } from '../../store/actions';
 
 const ResultCard = ({ movie, handleAddMovieToWatchlist, handleAddMovieToWatched, watchlist, watched }) => {
@@ -55,7 +57,7 @@ const ResultCard = ({ movie, handleAddMovieToWatchlist, handleAddMovieToWatched,
 }
 
 ResultCard.propTypes = {
-  movie: PropTypes.array.isRequired,
+  movie: PropTypes.object.isRequired,
   watchlist: PropTypes.array.isRequired,
   handleAddMovieToWatchlist: PropTypes.func.isRequired,
   handleAddMovieToWatched: PropTypes.func.isRequired

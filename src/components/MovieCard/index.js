@@ -1,5 +1,7 @@
+//== Packages
 import React from "react";
 
+//== Components
 import MovieControls from "../MovieControls";
 
 const MovieCard = ({ movie, type }) => {
@@ -13,7 +15,6 @@ const MovieCard = ({ movie, type }) => {
       />
       <MovieControls type={type} movie={movie} />
     </div>
-    
   )
 };
 

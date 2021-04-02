@@ -1,11 +1,11 @@
-// == Package Imports
+// == Package
 import { combineReducers } from 'redux';
 
-// == Local imports
+// == Reducers
 import lists from './lists';
 import search from './search';
 
-// == Reducer
+// == combinerReducers
 export default combineReducers({
   lists,
   search,

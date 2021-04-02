@@ -1,7 +1,10 @@
+//== Packages
 import axios from 'axios';
 
+//== Actions
 import { getSearchMoviesSuccess, GET_SEARCH_MOVIES } from '../store/actions';
 
+//== Key
 const tmdbApiKey = process.env.REACT_APP_API_KEY;
 const BASE_URL = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApiKey}&language=en-US&page=1&include_adult=false&query=`
 
@@ -9,7 +12,6 @@ const searchMw = store => next => action => {
   switch (action.type) {
     case GET_SEARCH_MOVIES: {
       const { search: { search} } = store.getState();
-      console.log(BASE_URL+search)
       const config = {
         method: 'get',
         url: BASE_URL+search

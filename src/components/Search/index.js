@@ -1,12 +1,15 @@
+// == Packages
 import React from "react";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+// == Actions
 import { changeSearchField, getMovies } from '../../store/actions';
 
+//== Components
 import ResultCard from '../ResultCard'
 
-const Add = ({ search, handleChangeSearch, results }) => {
+const Search = ({ search, handleChangeSearch, results }) => {
 
   const onChange = (e) => {
     e.preventDefault();
@@ -14,12 +17,12 @@ const Add = ({ search, handleChangeSearch, results }) => {
   }
 
   return (
-    <section className="add">
+    <section className="search">
       <div className="container">
-        <div className="add__content">
-          <div className="add__input__wrapper">
+        <div className="search__content">
+          <div>
             <input
-              className="add__input__field"
+              className="search__input"
               type="text"
               placeholder="Search for a movie..."
               value={search}
@@ -27,7 +30,7 @@ const Add = ({ search, handleChangeSearch, results }) => {
             />
           </div>
           {results.length > 0 && (
-            <ul className="add__results">
+            <ul className="search__results">
               {results.map((movie) => (
                 <li key={movie.id}>
                   <ResultCard movie={movie} />
@@ -41,7 +44,7 @@ const Add = ({ search, handleChangeSearch, results }) => {
   );
 };
 
-Add.propTypes = {
+Search.propTypes = {
   search: PropTypes.string.isRequired,
   handleChangeSearch: PropTypes.func.isRequired,
   results: PropTypes.array.isRequired
@@ -60,7 +63,7 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-const container = connect(mapStateToProps, mapDispatchToProps)(Add);
+const container = connect(mapStateToProps, mapDispatchToProps)(Search);
 
 export default container;
 

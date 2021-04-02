@@ -1,7 +1,7 @@
+//== Packages
 import React from "react";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
 import MovieCard from "../MovieCard";
 
 const Watchlist = ({ watchlist }) => {
@@ -21,11 +21,11 @@ const Watchlist = ({ watchlist }) => {
         {watchlist.length > 0 ? (
           <div className="movies__grid">
            {watchlist.map((movie) => (
-              <MovieCard movie={movie} type="watchlist" />
+              <MovieCard key={movie.id} movie={movie} type="watchlist" />
             ))}
           </div>
         ) : (
-          <h2 className="movies__no-movie">No movies in your list! Add some!</h2>
+          <h2 className="movies__no-movie">No movies in your list! Add some...</h2>
         )}
       </div>
     </section>

@@ -1,3 +1,4 @@
+//== Packages
 import React from "react";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -20,7 +21,7 @@ const Watched = ({ watched }) => {
         {watched.length > 0 ? (
           <div className="movies__grid">
            {watched.map((movie) => (
-              <MovieCard movie={movie} type="watched" />
+              <MovieCard key={movie.id} movie={movie} type="watched" />
             ))}
           </div>
         ) : (

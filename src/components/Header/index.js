@@ -1,3 +1,4 @@
+// == Packages
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -20,7 +21,7 @@ const Header = () => {
             </li>
 
             <li className="header__nav__item">
-              <Link className="header__nav__link btn btn-main" to="/add">
+              <Link className="header__nav__link btn btn-main" to="/search">
                 Search 🔍 
               </Link>
             </li>

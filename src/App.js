@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Watchlist from './components/Watchlist';
-import Add from './components/Add';
+import Search from './components/Search';
 import Watched from './components/Watched';
 
 const App = () => {
@@ -14,8 +14,8 @@ const App = () => {
         <Route exact path='/'>
           <Watchlist />
         </Route>
-        <Route path="/add">
-          <Add />
+        <Route path="/search">
+          <Search />
         </Route>
         <Route path="/watched">
           <Watched />

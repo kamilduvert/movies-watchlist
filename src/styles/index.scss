@@ -10,13 +10,17 @@
 /* --- components styles --- */
 @import '../components/Header/header';
 @import '../components/Watchlist/watchlist';
-@import '../components/Add/add';
+@import '../components/Search/search';
 @import '../components/ResultCard/resultCard';
 @import '../components/MovieCard/movieCard';
 @import '../components/MovieControls/movieControls';
 
 /* --- general styles --- */
 body {
+  font-family: "Quicksand", sans-serif;
+}
+
+input {
   font-family: "Quicksand", sans-serif;
 }
 
@@ -58,6 +62,3 @@ body {
   font-style: italic;
 }
 
-input {
-  font-family: "Quicksand", sans-serif;
-}
