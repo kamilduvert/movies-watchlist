@@ -19,7 +19,7 @@ const reducer = (oldState = initialState, action = {}) => {
       };
 
     default:
-      return initialState;
+      return oldState;
   }
 }
 

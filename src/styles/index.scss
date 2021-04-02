@@ -12,6 +12,8 @@
 @import '../components/Watchlist/watchlist';
 @import '../components/Add/add';
 @import '../components/ResultCard/resultCard';
+@import '../components/MovieCard/movieCard';
+@import '../components/MovieControls/movieControls';
 
 /* --- general styles --- */
 body {
@@ -23,7 +25,6 @@ body {
   margin: 0 auto;
   width: 80%;
 }
-
 
 .btn {
   padding: 10px 15px;

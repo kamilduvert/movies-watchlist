@@ -1,15 +1,16 @@
 import React from "react";
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import MovieCard from "../MovieCard";
 
 const Watchlist = ({ watchlist }) => {
   return (
-    <section className="watchlist">
+    <section className="movies">
       <div className="container">
-        <div className="watchlist__header">
-          <h1 className="watchlist__header__title">My Watchlist</h1>
-          {watchlist >0 && (
-            <span className="watchlist__header__counter">
+        <div className="movies__header">
+          <h2 className="movies__header__title">My Watchlist</h2>
+          {watchlist.length > 0 && (
+            <span className="movies__header__counter">
             {watchlist.length} {watchlist.length === 1 ? "Movie" : "Movies"}
             </span>
             )
@@ -17,11 +18,13 @@ const Watchlist = ({ watchlist }) => {
         </div>
 
         {watchlist.length > 0 ? (
-          <div className="watchlist__movies">
-           
+          <div className="movies__grid">
+           {watchlist.map((movie) => (
+              <MovieCard movie={movie} type="watchlist" />
+            ))}
           </div>
         ) : (
-          <h2 className="watchlist__no-movie">No movies in your list! Add some!</h2>
+          <h2 className="movies__no-movie">No movies in your list! Add some!</h2>
         )}
       </div>
     </section>
@@ -34,7 +37,7 @@ Watchlist.propTypes = {
 
 // == Container
 const mapStateToProps = (state) => ({
-  watchlist: state.watchlist.watchlist,
+  watchlist: state.lists.watchlist,
 });
 
 const mapDispatchToProps = (dispatch) => ({

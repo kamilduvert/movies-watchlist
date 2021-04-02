@@ -1,8 +1,11 @@
 import React from "react";
-
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import dayjs from 'dayjs';
 
-const resultCard = ({ movie }) => {
+import { addMovieToWatchlist, addMovieToWatched } from '../../store/actions';
+
+const ResultCard = ({ movie, handleAddMovieToWatchlist, handleAddMovieToWatched }) => {
 
   return (
     <div className="result-card">
@@ -29,21 +32,46 @@ const resultCard = ({ movie }) => {
         <div className="result-card__controls">
           <button
             className="btn result-card__controls__btn"
-            /* onClick={() => addMovieToWatchlist(movie)} */
+            onClick={() => handleAddMovieToWatchlist(movie)
+            }
           >
             Add to Watchlist
           </button>
 
           <button
             className="btn"
-            /* onClick={() => addMovieToWatched(movie)} */
+            onClick={() => handleAddMovieToWatched(movie)
+            }
           >
             Add to Watched
           </button>
+
         </div>
       </div>
     </div>
   );
 }
 
-export default resultCard;
+ResultCard.propTypes = {
+  movie: PropTypes.array.isRequired,
+  handleAddMovieToWatchlist: PropTypes.func.isRequired,
+  handleAddMovieToWatched: PropTypes.func.isRequired
+};
+
+// == Container
+const mapStateToProps = (state, ownProps) => ({
+  movie: ownProps.movie,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  handleAddMovieToWatchlist: (movie) => {
+    dispatch(addMovieToWatchlist(movie));
+  },
+  handleAddMovieToWatched: (movie) => {
+    dispatch(addMovieToWatched(movie));
+  }
+});
+
+const container = connect(mapStateToProps, mapDispatchToProps)(ResultCard);
+
+export default container;

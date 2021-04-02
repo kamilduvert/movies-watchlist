@@ -6,9 +6,10 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__inner-content">
-          <div className="header__logo">
+          <h1 className="header__logo">
+            <i className="fas fa-film"></i>{' '}
             <Link to="/">Movie Watchlist</Link>
-          </div>
+          </h1>
 
           <ul className="header__nav__list">
             <li className="header__nav__item">
@@ -20,7 +21,7 @@ const Header = () => {
             </li>
 
             <li className="header__nav__item">
-              <Link className="header__nav__link" to="/add" className="btn btn-main">
+              <Link className="header__nav__link btn btn-main" to="/add">
                 + Add
               </Link>
             </li>
