@@ -1,0 +1,38 @@
+.watchlist {
+  padding: 30px 0;
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &__title {
+      color: $color-primary;
+      margin: 0;
+    }
+
+    &__counter {
+      display: block;
+      background-color: $color-secondary;
+      padding: 5px 15px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      border-radius: 999px;
+      color: $color-primary;
+    }
+  }
+
+  &__movies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__no-movie {
+    color: $color-grey;
+      font-size: 3rem;
+      text-align: center;
+  }
+
+}

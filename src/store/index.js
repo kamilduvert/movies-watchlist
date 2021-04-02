@@ -8,7 +8,6 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from '../reducers';
 
 // middlewares
-/* import searchMW from '../middlewares/search'; */
 
 // == Store
 const store = createStore(
