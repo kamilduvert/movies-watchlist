@@ -6,5 +6,5 @@ import searchReducer from './search';
 
 // == Reducer
 export default combineReducers({
-  search: searchReducer,
+  /* search: searchReducer, */
 });

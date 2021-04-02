@@ -1,12 +1,12 @@
-const initalState = {
+const initialState = {
 
 };
 
 const reducer = (oldState = initialState, action = {}) => {
-  switch (action.type) {
+/*   switch (action.type) {
     case :
     default:
-  }
+  } */
 }
 
 export default reducer;

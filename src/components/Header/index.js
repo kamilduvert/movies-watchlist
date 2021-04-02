@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <div className="container">
-        <div className="header__content">
-          <div className="header__brand">
-            <Link to="/">MyMovieWatchList</Link>
+        <div className="header__inner-content">
+          <div className="header__logo">
+            <Link to="/">Movie Watchlist</Link>
           </div>
 
           <ul className="header__nav__list">
